@@ -66,3 +66,6 @@ The app will generate variants like:
 ![add_option](https://github.com/user-attachments/assets/6b6510d2-cbe8-4233-8501-6fb31cf9abbe)
 ![options](https://github.com/user-attachments/assets/2cf5c599-005f-42a9-93c1-f1a13ea389f0)
 ![home](https://github.com/user-attachments/assets/e022b374-63b4-46ea-b914-eba730adf812)
+
+## Link to the apk 
+https://drive.google.com/file/d/1hMyk3OzQ1jotqLkLm-iOST3lrCY0r2q5/view?usp=sharing
