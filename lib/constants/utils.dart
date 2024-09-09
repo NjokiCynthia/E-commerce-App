@@ -57,7 +57,7 @@ InputDecoration customInputDecoration({required String labelText}) {
     labelStyle:
         MyTheme.darkTheme.textTheme.bodyLarge!.copyWith(color: Colors.grey),
     border: OutlineInputBorder(
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         color: Colors.grey,
         width: 1.0,
       ),
@@ -71,7 +71,7 @@ InputDecoration customInputDecoration({required String labelText}) {
       borderRadius: BorderRadius.circular(8.0),
     ),
     focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         color: Colors.grey,
         width: 1.0,
       ),

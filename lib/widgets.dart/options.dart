@@ -7,8 +7,11 @@ class OptionWidget extends StatelessWidget {
   final VoidCallback onRemove;
   final VoidCallback onDone;
 
-  OptionWidget(
-      {required this.option, required this.onRemove, required this.onDone});
+  const OptionWidget(
+      {super.key,
+      required this.option,
+      required this.onRemove,
+      required this.onDone});
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +28,16 @@ class OptionWidget extends StatelessWidget {
                     children: [
                       Text(
                         option.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       IconButton(
-                        icon: Icon(Icons.delete, color: Colors.red),
+                        icon: const Icon(Icons.delete, color: Colors.red),
                         onPressed: onRemove,
                       ),
                     ],
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Wrap(
                     spacing: 8.0,
                     children: option.values
@@ -61,12 +64,12 @@ class OptionWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       IconButton(
-                        icon: Icon(Icons.delete, color: Colors.red),
+                        icon: const Icon(Icons.delete, color: Colors.red),
                         onPressed: onRemove,
                       ),
                       ElevatedButton(
                         onPressed: onDone,
-                        child: Text('Done'),
+                        child: const Text('Done'),
                       ),
                     ],
                   )

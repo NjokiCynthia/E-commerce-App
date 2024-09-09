@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'E-Commerce App',
       debugShowCheckedModeBanner: false,
       //theme: MyTheme.darkTheme,
-      routes: {'/': (context) => BottomNavBar()},
+      routes: {'/': (context) => const BottomNavBar()},
       initialRoute: '/',
     );
   }

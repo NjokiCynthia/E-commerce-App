@@ -3,6 +3,8 @@ import 'package:ecommerce/models/options.dart';
 import 'package:flutter/material.dart';
 
 class AddOptionScreen extends StatefulWidget {
+  const AddOptionScreen({super.key});
+
   @override
   _AddOptionScreenState createState() => _AddOptionScreenState();
 }
@@ -40,7 +42,7 @@ class _AddOptionScreenState extends State<AddOptionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Option'),
+        title: const Text('Add Option'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -50,7 +52,7 @@ class _AddOptionScreenState extends State<AddOptionScreen> {
               controller: nameController,
               decoration: customInputDecoration(labelText: 'Option Name'),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             TextFormField(
@@ -62,11 +64,11 @@ class _AddOptionScreenState extends State<AddOptionScreen> {
               children: [
                 ElevatedButton(
                   onPressed: addValue,
-                  child: Text('Add Value'),
+                  child: const Text('Add Value'),
                 ),
                 ElevatedButton(
                   onPressed: saveOption,
-                  child: Text('Save Option'),
+                  child: const Text('Save Option'),
                 ),
               ],
             ),
@@ -75,7 +77,7 @@ class _AddOptionScreenState extends State<AddOptionScreen> {
               children: values
                   .map((value) => Chip(
                         label: Text(value),
-                        deleteIcon: Icon(Icons.cancel),
+                        deleteIcon: const Icon(Icons.cancel),
                         onDeleted: () => removeValue(value),
                       ))
                   .toList(),

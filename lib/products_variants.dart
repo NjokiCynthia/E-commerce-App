@@ -7,6 +7,8 @@ import 'package:ecommerce/widgets.dart/options.dart';
 import 'package:flutter/material.dart';
 
 class ProductVariantsScreen extends StatefulWidget {
+  const ProductVariantsScreen({super.key});
+
   @override
   _ProductVariantsScreenState createState() => _ProductVariantsScreenState();
 }
@@ -19,7 +21,7 @@ class _ProductVariantsScreenState extends State<ProductVariantsScreen> {
   Future<void> navigateToAddOption() async {
     final result = await Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => AddOptionScreen()),
+      MaterialPageRoute(builder: (context) => const AddOptionScreen()),
     );
 
     if (result != null && result is Option) {
@@ -54,7 +56,7 @@ class _ProductVariantsScreenState extends State<ProductVariantsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Product Variants'),
+        title: const Text('Add Product Variants'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -66,16 +68,16 @@ class _ProductVariantsScreenState extends State<ProductVariantsScreen> {
               style: MyTheme.darkTheme.textTheme.headlineMedium!
                   .copyWith(color: secondaryDarkColor),
             ),
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             TextFormField(
                 decoration: customInputDecoration(labelText: 'Title')),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Text(
               'Product Description',
               style: MyTheme.darkTheme.textTheme.headlineMedium!
                   .copyWith(color: secondaryDarkColor),
             ),
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             TextFormField(
               decoration: customInputDecoration(labelText: 'Enter description'),
               maxLines: null,
@@ -109,19 +111,19 @@ class _ProductVariantsScreenState extends State<ProductVariantsScreen> {
               children: [
                 ElevatedButton(
                   onPressed: navigateToAddOption,
-                  child: Text('Add Option'),
+                  child: const Text('Add Option'),
                 ),
                 ElevatedButton(
                   onPressed: generateVariants,
-                  child: Text('Generate Variants'),
+                  child: const Text('Generate Variants'),
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text('Generated Variants:'),
+                const Text('Generated Variants:'),
                 Text(
                     '${variants.where((variant) => variant.isSelected).length} selected'),
               ],
@@ -145,7 +147,7 @@ class _ProductVariantsScreenState extends State<ProductVariantsScreen> {
                       Expanded(
                         child: Text(variants[index].name),
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                       SizedBox(
                         width: 80,
                         child: TextFormField(
@@ -157,7 +159,7 @@ class _ProductVariantsScreenState extends State<ProductVariantsScreen> {
                           },
                         ),
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                       Row(
                         children: [
                           SizedBox(
@@ -177,7 +179,7 @@ class _ProductVariantsScreenState extends State<ProductVariantsScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               IconButton(
-                                icon: Icon(Icons.arrow_drop_up),
+                                icon: const Icon(Icons.arrow_drop_up),
                                 onPressed: () {
                                   setState(() {
                                     int currentQty = int.tryParse(
@@ -189,7 +191,7 @@ class _ProductVariantsScreenState extends State<ProductVariantsScreen> {
                                 },
                               ),
                               IconButton(
-                                icon: Icon(Icons.arrow_drop_down),
+                                icon: const Icon(Icons.arrow_drop_down),
                                 onPressed: () {
                                   setState(() {
                                     int currentQty = int.tryParse(
@@ -206,9 +208,9 @@ class _ProductVariantsScreenState extends State<ProductVariantsScreen> {
                           ),
                         ],
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                       IconButton(
-                        icon: Icon(Icons.edit),
+                        icon: const Icon(Icons.edit),
                         onPressed: () {
                           // Add edit functionality
                         },
